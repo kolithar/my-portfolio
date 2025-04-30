@@ -81,5 +81,8 @@ nav ul li a:hover::after{
     color: goldenrod;
 }
 .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
 }
