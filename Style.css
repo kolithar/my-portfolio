@@ -11,10 +11,10 @@ body{
 }
 
 
-#profile-container{
+#header{
     width: 100%;
     height: 100vh;
-    background-image:url("Assets/aws.png") ;
+    /*background-image:url("Assets/aws.png") ;*/
     background-size: cover;
     background-position: center;
 
