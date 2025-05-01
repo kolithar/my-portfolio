@@ -93,7 +93,16 @@
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcotents = document.getElementsByClassName("tab-contents");
 
+   function opentab(tabname){
+       for (tablink of tablinks){
+           tablink.classList.remove("active-link")
+       }
+       for (tabcotent of tabcotents){
+           tabcotent.classList.remove("active-tab")
+       }
 
+
+   }
 
 </script>
 </body>
