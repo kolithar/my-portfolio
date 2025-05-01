@@ -138,5 +138,8 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     color: coral;
-    font-size: 10px;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
 }
