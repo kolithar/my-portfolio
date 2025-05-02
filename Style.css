@@ -163,9 +163,13 @@ nav ul li a:hover::after{
 }
 
 .services-list div{
-    background: goldenrod;
+    background: orange;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
     border-right: 10px;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
 }
