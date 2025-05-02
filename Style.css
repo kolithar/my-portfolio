@@ -214,6 +214,7 @@ nav ul li a:hover::after{
     width: 100%;
     border-radius: 10px;
     display: block;
+    transition: transform 0.5s;
 }
 
 .layer{
@@ -251,4 +252,7 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 
+}
+.work:hover img{
+    transform: scale(1.1);
 }
