@@ -277,7 +277,7 @@ nav ul li a:hover::after{
 
 /*-------------------contach----------------------------*/
 .contach-left{
-    flex-basis: 60%;
+    flex-basis: 35%;
 
 }
 .contach-right{
@@ -311,5 +311,19 @@ nav ul li a:hover::after{
 }
 .btn.btn2{
     display: inline-block;
-    background: orange;
+    background: black;
+}
+.contach-right form {
+    width: 100%;
+}
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: lightblue;
+    padding: 15px;
+    margin: 15px 0;
+    color: goldenrod;
+    font-size: 18px;
+    border-radius: 6px;
 }
