@@ -274,3 +274,21 @@ nav ul li a:hover::after{
 .btn:hover{
     background: bisque;
 }
+
+/*-------------------contach----------------------------*/
+.contach-left{
+    flex-basis: 60%;
+
+}
+.contach-right{
+    flex-basis: 60%;
+}
+
+.contach-left p{
+    margin-top: 30px;
+}
+.contach-left p i{
+    color: red;
+    margin-right: 15px;
+    font-size: 25px;
+}
