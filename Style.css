@@ -309,3 +309,7 @@ nav ul li a:hover::after{
     color: darkgoldenrod;
     transform: translateY(-5px);
 }
+.btn.btn2{
+    display: inline-block;
+    background: orange;
+}
