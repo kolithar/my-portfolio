@@ -9,6 +9,9 @@ body{
     background-color: #080808;
     color: #fff;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 
 #header{
@@ -17,6 +20,7 @@ body{
     background-image:url("Assets/gold black.jpg") ;
     background-size: cover;
     background-position: center;
+
 
 }
 
@@ -46,7 +50,7 @@ nav ul li a{
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
-     position: relative;
+    position: relative;
 }
 
 nav ul li a::after{
@@ -75,6 +79,20 @@ nav ul li a:hover::after{
 .header-text h1 span{
     color: yellow;
 }
+.header i{
+    width: 35px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    bottom: 0px;
+    margin: auto;
+    display:none;
+}
+
+.menu {
+    display: none;
+}
+
 /*-----------------ABOUT---------------*/
 #about{
     padding: 80px 0;
@@ -181,7 +199,7 @@ nav ul li a:hover::after{
     margin-bottom: 15px;
 }
 .services-list div a{
-   text-decoration: none;
+    text-decoration: none;
     color: yellow;
     font-size: 12px;
     margin-top: 20px;
@@ -218,7 +236,7 @@ nav ul li a:hover::after{
 }
 
 .layer{
-     width: 100%;
+    width: 100%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6),orange);
     border-radius: 10px;
@@ -345,46 +363,480 @@ form .btn2{
 .copyright i{
     color: gold;
 }
+
+/*---------------Assiment--------------------*/
+
+.assignments-section {
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: yellow;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.assignments-section-title {
+    font-size: 3rem;
+    margin: 60px auto 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    /*text-shadow:*/
+    /*        0 0 20px #ffbe76,*/
+    /*        0 0 10px #ffbe76,*/
+    /*        0 0 20px #ffbe76,*/
+    /*        0 0 40px #ffbe76,*/
+    /*        0 0 80px #ffbe76;*/
+    color: #ffbe76;
+    position: relative;
+}
+
+.assignments-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.assignment-card {
+    background: #111;
+    border: 2px solid black;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.assignment-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ccae62, #1c0914, #ccae62);
+    filter: blur(15px);
+    z-index: -1;
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+    border-radius: 15px;
+}
+
+.assignment-card:hover {
+/*/transform: translateY(-10px);/*/
+transform: scale(1.05);
+    box-shadow: 0 0 25px gold, 0 0 30px #ffbe76;
+}
+
+.assignment-card:hover::before {
+    opacity: 0.8;
+}
+
+.assignment-title {
+    color: yellow;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.assignment-desc {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.assignment-tech-stack span {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    padding: 5px 10px;
+    border: 1px dashed white;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    color: yellow;
+    background: rgba(0, 245, 201, 0.05);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.assignment-tech-stack span:hover {
+    background: rgba(0, 245, 201, 0.15);
+    box-shadow: 0 0 10px #00f5c9;
+}
+
+.assignment-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #00f5c9;
+    text-decoration: none;
+    border-bottom: 1px dashed #aab65b;
+    font-size: 0.95rem;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.assignment-links a:hover {
+    color: #ffbe76;
+    border-color: #ffbe76;
+}
+
+@media (max-width: 480px) {
+    .assignments-section-title {
+        font-size: 2.5rem;
+    }
+
+    .assignments-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .assignment-desc {
+        font-size: 0.9rem;
+    }
+
+    .assignment-links a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+
 /*-----------------CSS for small screenc---------------*/
-
-
-
-@media (max-width: 600px) {
-    #header{
-        background-image: url("Assets/gold line.jpg");
+@media only screen and (max-width: 768px) {
+    .header-text {
+        margin-top: 30%;
+        font-size: 20px;
+        text-align: center;
     }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
+
+    .header-text h1 {
         font-size: 30px;
     }
 
-    nav.fa-solid{
-        display: block;
-        font-size: 25px;
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
     }
-    nav ul{
-        background: coral;
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2,
+    .contach-left,
+    .contach-right {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-list div,
+    .work {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}/* 1440px - Large desktop screens */
+@media only screen and (max-width: 1440px) {
+    .header-text {
+        margin-top: 20%;
+        font-size: 22px;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 1024px - Standard laptop screens */
+@media only screen and (max-width: 1024px) {
+    .header-text {
+        margin-top: 25%;
+        font-size: 20px;
+    }
+
+    .header-text h1 {
+        font-size: 35px;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        padding: 10px;
+    }
+}
+
+/* 768px - Tablets (already present) */
+@media only screen and (max-width: 768px) {
+    .header-text {
+        margin-top: 30%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .about-col-1,
+    .about-col-2,
+    .contach-left,
+    .contach-right {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .tab-titles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-list,
+    .work-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .services-list div,
+    .work {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}
+
+/* 425px - Mobile (Large phones) */
+@media only screen and (max-width: 425px) {
+    .header-text h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 8px 25px;
+    }
+
+    .social-icons a {
+        font-size: 22px;
+    }
+}
+
+/* 375px - Mobile (Medium phones) */
+@media only screen and (max-width: 375px) {
+    .header-text h1 {
+        font-size: 24px;
+    }
+
+    .header-text {
+        font-size: 18px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+}
+
+/* 320px - Mobile (Smallest phones) */
+@media only screen and (max-width: 320px) {
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    .header-text {
+        font-size: 16px;
+        margin-top: 40%;
+    }
+
+    .btn {
+        font-size: 11px;
+        padding: 6px 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+
+/*
+
+!* Hamburger Menu Styles *!
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger-icon span:nth-child(3) {
+    top: 20px;
+}
+
+!* When menu is active/open *!
+.hamburger-icon.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+}
+
+!* Update your existing media query *!
+@media only screen and (max-width: 768px) {
+    .hamburger-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        z-index: 999;
+    }
+
+    nav ul {
+        background: rgba(0,0,0,0.9);
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
-
+        z-index: 2;
+        transition: right 0.5s;
     }
-    nav ul li{
+
+    nav ul li {
         display: block;
         margin: 25px;
     }
 
-    nav ul.fas-solid{
-        position: absolute;
-        top:255px;
-        left: 25px;
-        cursor: pointer;
-
+    nav ul.active {
+        right: 0;
     }
-}
+}*/
