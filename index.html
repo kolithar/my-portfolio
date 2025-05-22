@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
     <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="CSS/About.css">
+<!--    <link rel="stylesheet" href="CSS/About.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
@@ -14,21 +14,24 @@
 <div id="header">
   <div class="container">
     <nav>
-      <img src="Assets/gold%20logo.jpg" class="logo">
-      <ul>
+      <img src="Assets/new-logo.webp" class="logo">
+
+
+
+        <ul id="nav-links">
+            <img src="Assets/clos.png" id="close-menu" />
         <li><a href="#">HOME</a></li>
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#services">SERVICES</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#portfolio">PROJECTS</a></li>
         <li><a href="#contach">CONTACT</a></li>
 
-
-
       </ul>
-       <img src="Assets/Menu.png" class="menu">
+
+        <img src="Assets/Menu.png" id="open-menu" />
+
     </nav>
 <div class="header-text">
-
 
     <p>SOFTWER ENGINEER</p>
     <h1>HI,I'M <span>KOLI</span> <br> FROM SRI LANKA</h1>
@@ -166,7 +169,25 @@
 
 </div>
 
-<!------------------------------------    Assiment-------------------------------->
+
+
+<!-------------------------------------------------Technology-------------------------------------------->
+<section class="technology-section">
+    <h2>Technologies I Use</h2>
+    <div class="tech-logos">
+        <img src="Assets/aws.png" alt="HTML">
+        <img src="Assets/MYSQL.png" alt="CSS">
+        <img src="Assets/php.png" alt="JavaScript">
+        <img src="Assets/python.png" alt="React">
+        <img src="Assets/figma.png" alt="Node.js">
+    </div>
+</section>
+
+
+
+
+
+<!------------------------------------Assiment-------------------------------->
 <div class="card-container">
     <div class="card">
         <h3>Project 1</h3>
@@ -223,12 +244,6 @@
 
 
 
-
-
-
-
-
-
 <!--------------------contach---------------------------->
 
 <div id="contach">
@@ -282,5 +297,22 @@ var tabcotents = document.getElementsByClassName("tab-contents");
    }
 
 </script>
+
+<script>
+    const navLinks = document.getElementById("nav-links");
+    const openMenu = document.getElementById("open-menu");
+    const closeMenu = document.getElementById("close-menu");
+
+    openMenu.addEventListener("click", () => {
+        navLinks.style.right = "0";
+    });
+
+    closeMenu.addEventListener("click", () => {
+        navLinks.style.right = "-100%";
+    });
+</script>
+
+
+
 </body>
 </html>

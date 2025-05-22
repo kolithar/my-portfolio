@@ -17,7 +17,7 @@ html{
 #header{
     width: 100%;
     height: 100vh;
-    background-image:url("Assets/gold black.jpg") ;
+    background-image:url("Assets/new-new-black-ruound.jpg") ;
     background-size: cover;
     background-position: center;
 
@@ -363,6 +363,65 @@ form .btn2{
 .copyright i{
     color: gold;
 }
+/*---------------tec--------------*/
+
+.technology-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #1e1e1e;
+}
+
+.technology-section h2 {
+    color: #f1c40f;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    animation: slideIn 2s ease-in-out;
+}
+
+.tech-logos img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 10px;
+}
+
+.tech-logos img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px #f1c40f;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 /*---------------Assiment--------------------*/
 
@@ -420,339 +479,70 @@ form .btn2{
 }
 
 
-
-
-
-/*-----------------CSS for small screenc---------------*/
-@media only screen and (max-width: 768px) {
-    .header-text {
-        margin-top: 30%;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        width: 100%;
-        flex-direction: column;
-        padding: 10px 0;
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .about-col-1,
-    .about-col-2,
-    .contach-left,
-    .contach-right {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    .tab-titles {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services-list,
-    .work-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .services-list div,
-    .work {
-        padding: 20px;
-    }
-
-    .btn {
-        padding: 10px 30px;
-        font-size: 14px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 16px;
-    }
-
-    .social-icons a {
-        font-size: 24px;
-    }
-}/* 1440px - Large desktop screens */
-@media only screen and (max-width: 1440px) {
-    .header-text {
-        margin-top: 20%;
-        font-size: 22px;
-    }
-
-    .header-text h1 {
-        font-size: 40px;
-    }
-
-    .services-list,
-    .work-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* 1024px - Standard laptop screens */
-@media only screen and (max-width: 1024px) {
-    .header-text {
-        margin-top: 25%;
-        font-size: 20px;
-    }
-
-    .header-text h1 {
-        font-size: 35px;
-    }
-
-    .services-list,
-    .work-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav ul {
-        padding: 10px;
-    }
-}
-
-/* 768px - Tablets (already present) */
-@media only screen and (max-width: 768px) {
-    .header-text {
-        margin-top: 30%;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul {
-        width: 100%;
-        flex-direction: column;
-        padding: 10px 0;
-        display: none;
-    }
-
-    .menu {
-        display: block;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    .row {
-        flex-direction: column;
-    }
-
-    .about-col-1,
-    .about-col-2,
-    .contach-left,
-    .contach-right {
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    .tab-titles {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .services-list,
-    .work-list {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .services-list div,
-    .work {
-        padding: 20px;
-    }
-
-    .btn {
-        padding: 10px 30px;
-        font-size: 14px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 16px;
-    }
-
-    .social-icons a {
-        font-size: 24px;
-    }
-}
-
-/* 425px - Mobile (Large phones) */
-@media only screen and (max-width: 425px) {
-    .header-text h1 {
-        font-size: 28px;
-    }
-
-    .btn {
-        font-size: 13px;
-        padding: 8px 25px;
-    }
-
-    .social-icons a {
-        font-size: 22px;
-    }
-}
-
-/* 375px - Mobile (Medium phones) */
-@media only screen and (max-width: 375px) {
-    .header-text h1 {
-        font-size: 24px;
-    }
-
-    .header-text {
-        font-size: 18px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 14px;
-    }
-
-    .btn {
-        font-size: 12px;
-        padding: 8px 20px;
-    }
-}
-
-/* 320px - Mobile (Smallest phones) */
-@media only screen and (max-width: 320px) {
-    .header-text h1 {
-        font-size: 20px;
-    }
-
-    .header-text {
-        font-size: 16px;
-        margin-top: 40%;
-    }
-
-    .btn {
-        font-size: 11px;
-        padding: 6px 15px;
-    }
-
-    .social-icons a {
-        font-size: 20px;
-    }
-}
-
-
-/*
-
-!* Hamburger Menu Styles *!
-.hamburger-icon {
-    display: none;
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
+/*----------------------------css small screens---------------------------*/
+/* Common nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    margin-right: 20px;
 }
 
-.hamburger-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #fff;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.hamburger-icon span:nth-child(1) {
-    top: 0px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
-.hamburger-icon span:nth-child(2) {
-    top: 10px;
+/* Hide menu and close icons by default */
+#open-menu, #close-menu {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
 }
 
-.hamburger-icon span:nth-child(3) {
-    top: 20px;
-}
-
-!* When menu is active/open *!
-.hamburger-icon.active span:nth-child(1) {
-    top: 10px;
-    transform: rotate(135deg);
-}
-
-.hamburger-icon.active span:nth-child(2) {
-    opacity: 0;
-    left: -60px;
-}
-
-.hamburger-icon.active span:nth-child(3) {
-    top: 10px;
-    transform: rotate(-135deg);
-}
-
-!* Update your existing media query *!
-@media only screen and (max-width: 768px) {
-    .hamburger-icon {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 25px;
-        z-index: 999;
-    }
-
+/* Mobile Responsive Styles */
+@media (max-width: 600px) {
     nav ul {
-        background: rgba(0,0,0,0.9);
         position: fixed;
+        right: -100%;
         top: 0;
-        right: -200px;
-        width: 200px;
+        background: #111;
+        width: 70%;
         height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        z-index: 100;
     }
 
     nav ul li {
-        display: block;
-        margin: 25px;
+        width: 100%;
     }
 
-    nav ul.active {
-        right: 0;
+    nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        color: #fff;
     }
-}*/
+
+    #open-menu {
+        display: block;
+    }
+
+    #close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+    }
+}
